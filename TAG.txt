@@ -3,7 +3,7 @@ git
 git add .
 git commit -m "Atualização para versão 3.0.0 com suporte a PHP 8.3 ou superior"
 git tag 3.0
-git push origin master --tags
+git push origin main --tags
 
 
 github
