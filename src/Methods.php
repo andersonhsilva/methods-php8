@@ -1049,7 +1049,7 @@ class Methods
      * // Saída: Agora são 02 horas 10 minutos e 50 segundos
      * ```
      */
-    private static function mask(string $val, string $mask): string
+    public static function mask(string $val, string $mask): string
     {
         $maskared = '';
         if (!empty($val)) {
