@@ -31,7 +31,7 @@ class Methods
         if ($value === null) return null;
 
         // Remove símbolos de moeda, porcentagem e formatações comuns
-        $value = preg_replace('/[^\d,.-]/', '', $value);
+        $value = preg_replace('/[^\d,-]/', '', $value);
 
         // Substitui a vírgula por ponto e converte para float
         return floatval(str_replace(',', '.', $value));
@@ -121,7 +121,7 @@ class Methods
     public static function showDoubleAsInt(float $value): int
     {
         // Remove as casas decimais sem arredondar, mantendo o valor numérico
-        return (int) number_format($value, 2, '', '');
+        return (int) explode('.', $value)[0];
     }
 
 
@@ -518,7 +518,7 @@ class Methods
      */
     public static function cleanStringChars(string $text): string
     {
-        return preg_replace('/[^0-9a-zA-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\/\.]/', ' ', $text);
+        return trim(preg_replace('/[^0-9a-zA-ZáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ\/\.]/', ' ', $text));
     }
 
 
