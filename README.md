@@ -59,6 +59,12 @@ O projeto está atualizado para o PHP 8.3.10. Utilize sempre a última versão d
 - Retorna a data atual por extenso no formato brasileiro.
 - Converte um valor numérico para sua representação monetária por extenso em português.
 
+## Rodar testes automatizados
+
+```sh
+composer test
+```
+
 ## Contato
 
 **Autor:** Anderson Henrique da Silva  
