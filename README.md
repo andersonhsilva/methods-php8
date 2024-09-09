@@ -75,7 +75,7 @@ composer test
 ## Contato
 
 **Autor:** Anderson Henrique
-**Contribuições:** Edinaldo Santhiago / KKaique Bezerra
+**Contribuições:** Edinaldo Santhiago / Kaique Bezerra
 
 **E-mail:** [anderson.h.silva@gmail.com](mailto:anderson.h.silva@gmail.com)
 
