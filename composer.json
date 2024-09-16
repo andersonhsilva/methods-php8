@@ -1,7 +1,7 @@
 {
     "name": "andersonhsilva/methods-php8",
     "description": "Métodos PHP para uso diário",
-    "version": "3.2",
+    "version": "3.2.0",
     "type": "library",
     "license": "MIT",
     "autoload": {
