@@ -643,7 +643,7 @@ class Methods
      * try {
      *     Methods::validateCpf('123.456.789-00');
      * } catch (\Exception $e) {
-     *     echo $e->getMessage(); // Saída: "O CPF informado está inválido!"
+     *     echo $e->getMessage(); // Saída: "CPF inválido!"
      * }
      * ```
      */
@@ -651,7 +651,7 @@ class Methods
     {
         if (!empty($value)) {
             if (!self::isCpfValid($value)) {
-                throw new \Exception("O CPF informado está inválido!");
+                throw new \Exception("CPF inválido!");
             }
         }
     }
@@ -670,7 +670,7 @@ class Methods
      * try {
      *     Methods::validateCnpj('12.345.678/0001-95');
      * } catch (\Exception $e) {
-     *     echo $e->getMessage(); // Saída: "O CNPJ informado está inválido!"
+     *     echo $e->getMessage(); // Saída: "CNPJ inválido!"
      * }
      * ```
      */
@@ -678,7 +678,7 @@ class Methods
     {
         if (!empty($value)) {
             if (!self::isCnpjValid(self::onlyNumber($value))) {
-                throw new \Exception("O CNPJ informado está inválido!");
+                throw new \Exception("CNPJ inválido!");
             }
         }
     }
@@ -698,7 +698,7 @@ class Methods
      *     Methods::validateCpfCnpj('12345678909'); // CPF
      *     Methods::validateCpfCnpj('12.345.678/0001-95'); // CNPJ
      * } catch (\InvalidArgumentException $e) {
-     *     echo $e->getMessage(); // Saída: "O CPF informado está inválido!" ou "O CNPJ informado está inválido!"
+     *     echo $e->getMessage(); // Saída: "CPF inválido!" ou "CNPJ inválido!"
      * }
      * ```
      */
@@ -710,12 +710,12 @@ class Methods
             if ($length <= 11) {
                 // Validando CPF
                 if (!self::isCpfValid(self::onlyNumber($value))) {
-                    throw new \InvalidArgumentException("O CPF informado está inválido!");
+                    throw new \InvalidArgumentException("CPF inválido!");
                 }
             } elseif ($length > 11) {
                 // Validando CNPJ
                 if (!self::isCnpjValid(self::onlyNumber($value))) {
-                    throw new \InvalidArgumentException("O CNPJ informado está inválido!");
+                    throw new \InvalidArgumentException("CNPJ inválido!");
                 }
             }
         }
@@ -737,7 +737,7 @@ class Methods
      * try {
      *     Methods::validateEmail('exemplo@dominiocom');
      * } catch (\Exception $e) {
-     *     echo $e->getMessage(); // Saída: "O e-mail informado está inválido!"
+     *     echo $e->getMessage(); // Saída: "E-mail inválido!"
      * }
      * ```
      */
@@ -745,7 +745,7 @@ class Methods
     {
         if (!empty($value)) {
             if (!self::isEmailValid($value)) {
-                throw new \Exception("O e-mail informado está inválido!");
+                throw new \Exception("E-mail inválido!");
             }
         }
     }
