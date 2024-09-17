@@ -647,7 +647,7 @@ class Methods
      * }
      * ```
      */
-    public static function validateCpf(string $value): void
+    public static function validateCpf(?string $value): void
     {
         if (!empty($value)) {
             if (!self::isCpfValid($value)) {
@@ -674,7 +674,7 @@ class Methods
      * }
      * ```
      */
-    public static function validateCnpj(string $value): void
+    public static function validateCnpj(?string $value): void
     {
         if (!empty($value)) {
             if (!self::isCnpjValid(self::onlyNumber($value))) {
@@ -741,7 +741,7 @@ class Methods
      * }
      * ```
      */
-    public static function validateEmail(string $value): void
+    public static function validateEmail(?string $value): void
     {
         if (!empty($value)) {
             if (!self::isEmailValid($value)) {
