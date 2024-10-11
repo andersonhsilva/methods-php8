@@ -1105,11 +1105,9 @@ class Methods
             return false;
         }
 
-        // Etapa 3: Filtra combinações inválidas como 00000000000 e 22222222222
-        for ($i = 0; $i < 10; $i++) {
-            if (array_fill(0, 11, $i) === $digits) {
-                return false;
-            }
+        // Etapa 3: Filtra combinações inválidas como 00000000000, 11111111111, etc.
+        if (preg_match('/(\d)\1{10}/', $cpf)) {
+            return false;
         }
 
         // Etapa 4: Calcula e compara o primeiro dígito verificador
