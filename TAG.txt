@@ -9,7 +9,7 @@ git push origin main --tags
 github
 -----------
 Apenas se certificar se o repositorio está tageado com o comando anterior, clicar no link Tags ao lado de Branches, feita para atualização dos arquivos na biblioteca.
-
+    
 packagist
 -----------
 Acesse o -> https://packagist.org/
